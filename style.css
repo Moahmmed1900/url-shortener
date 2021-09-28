@@ -1,0 +1,372 @@
+@font-face {
+    font-family: 'Poppins';
+    src: url(https://fonts.googleapis.com/css2?family=Poppins);
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-width: 1500px;
+    max-width: 1920px;
+    max-height: 2140px;
+    margin: auto;
+    padding-left: 10px;
+    box-sizing: border-box;
+    font-size: 18px;
+}
+
+.navbar {
+    display: grid;
+    grid-template-areas: 'logo_nav empty auth';
+    grid-template-columns: 2fr 0.5fr 1fr;
+    grid-auto-flow: column;
+    padding-top: 10px;
+    padding-left: 100px;
+    padding-bottom: 60px;
+}
+
+.navbar div {
+    align-self: center;
+}
+
+
+.logo-nav {
+    grid-area: logo_nav;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-areas: 'logo nav_items';
+    grid-template-columns: 125px auto;
+    column-gap: 30px;
+}
+
+.logo {
+    text-align: center;
+}
+
+.auth {
+    grid-area: auth;
+    justify-self: right;
+    padding-right: 3vw;
+}
+
+.nav-item{
+    margin-right: 50px;
+    text-decoration: none;
+    color: hsl(0, 0%, 75%);
+    font-weight: bold;
+}
+
+.nav-item:hover{
+    color: hsl(0, 0%, 0%);
+}
+
+.sign-up {
+    background-color: hsl(180, 66%, 49%);
+    border: none;
+    height: 40px;
+    width: 115px;
+    border-radius: 20px;
+    opacity: 40%;
+}
+
+.sign-up:hover {
+    opacity: 100%;
+}
+
+.sign-up a{
+    color: white;
+    font-weight: 500;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+main section {
+    background-color: #f0f1f6;
+}
+
+.landing {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-areas: 'text img';
+    grid-template-columns: 1fr 1fr;
+    background-color: white;
+    padding-left: 100px;
+    max-width: 1500px;
+    margin: auto;
+}
+
+.landing header h1{
+    font-size: 100px;
+    font-weight: 700;
+    margin-bottom: 0px;
+    margin-top: 10px;
+}
+
+.landing p {
+    color: hsl(0, 0%, 75%);
+    font-size: 25px;
+    font-weight: 500;
+    width: 750px;
+}
+
+.landing button {
+    background-color: hsl(180, 66%, 49%);
+    height: 50px;
+    width: 200px;
+    border-radius: 35px;
+    opacity: 40%;
+    color: white;
+    font-weight: 500;
+    font-size: 20px;
+    border: none;
+}
+
+.landing button:hover {
+    opacity: 100%;
+}
+
+.image-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.image-container img{
+    position: absolute;
+    right: -100px;
+}
+
+.short-it-form {
+    margin: 0px auto;
+    margin-top: 120px;
+    background-color: hsl(257, 27%, 26%);
+    background-image: url("images/bg-shorten-desktop.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 1110px;
+    height: 168px;
+    border-radius: 10px;
+    display: grid;
+}
+
+.short-it-form form {
+    align-self: center;
+    justify-self: center;
+}
+
+.short-it-form input[type=url] {
+    width: 815px;
+    height: 35px;
+    padding: 10px 20px;
+    margin-right: 15px;
+    border-radius: 10px;
+    border: none;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.short-it-form input[type=submit] {
+    background-color: hsl(180, 66%, 49%);
+    height: 50px;
+    width: 135px;
+    border-radius: 10px;
+    opacity: 40%;
+    color: white;
+    font-weight: 500;
+    font-size: 15px;
+    border: none;
+}
+
+.short-it-form input[type=submit]:hover {
+    opacity: 100%;
+}
+
+#features {
+    position: relative;
+    top: -85px;
+    z-index: -1;
+    margin-left: -10px;
+    text-align: center;
+    padding: 125px;
+    padding-bottom: 155px;
+}
+
+#features header {
+    margin: 0px auto;
+    width: 475px;
+    margin-bottom: 150px;
+}
+
+#features header h2{
+    font-size: 30px;
+    font-weight: 700;
+}
+
+#features header p {
+    color: hsl(0, 0%, 75%);
+    font-weight: 500;
+    font-size: 15px;
+}
+
+#features .stats-section {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 350px 350px 350px;
+    max-width: 1120px;
+    margin: auto;
+    column-gap: 35px;
+    position: relative;
+}
+
+.stats-section article {
+    height: 270px;
+    background-color: white;
+    border-radius: 10px;
+    position: relative;
+}
+
+.stats-section article p {
+    text-align: left;
+    padding-left: 32px;
+    padding-right: 32px;
+    font-size: 15px;
+    font-weight: 500;
+    color: hsl(0, 0%, 75%);
+    margin-top: 0px;
+}
+
+.stats-section article h3 {
+    text-align: left;
+    padding-left: 32px;
+    margin: 0px;
+    padding-top: 75px;
+    padding-bottom: 15px;
+}
+
+.stats-section article img {
+    position: absolute;
+    left: 30px;
+    top: -50px;
+    background-color: hsl(257, 27%, 26%);
+    padding: 25px;
+    border-radius: 50px;
+}
+
+.stats-section .detailed {
+    top: 45px;
+}
+
+.stats-section .fully {
+    top: 90px;    
+}
+
+.stats-section hr {
+    position: absolute;
+    width: 1100px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 10px;
+    background-color: hsl(180, 66%, 49%);
+    border: none;
+    z-index: -1;
+}
+
+#pricing {
+    position: relative;
+    background-image: url("/images/bg-boost-desktop.svg");
+    width: 100%;
+    height: 250px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: hsl(257, 27%, 26%);
+    margin-left: -10px;
+    padding-right: 10px;
+    top: -110px;
+    display: grid;
+}
+
+#pricing div{
+    align-self: center;
+    justify-self: center;
+    text-align: center;
+}
+
+#pricing div h2 {
+    color: white;
+    font-size: 40px;
+    font-weight: 700;
+    margin-top: 0px;
+}
+
+#pricing div a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    background-color: hsl(180, 66%, 49%);
+    padding: 15px 45px;
+    border-radius: 70px;
+    opacity: 40%;
+}
+
+#pricing div a:hover {
+    opacity: 100%;
+}
+
+#resources {
+    position: relative;
+    width: 100%;
+    height: 310px;
+    margin-left: -10px;
+    padding-right: 10px;
+    top: -110px;
+    background-color: hsl(260, 8%, 14%);
+    overflow: hidden;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 545px 190px 190px 190px auto;
+    padding-top: 80px;
+    text-align: center;
+}
+
+#resources h4{
+    margin-top: 0px;
+    color: white;
+    text-align: left;
+}
+
+#resources a{
+    text-decoration: none;
+    color: hsl(0, 0%, 75%);
+    font-size: 15px;
+}
+
+#resources a:hover {
+    color:hsl(180, 66%, 49%)
+}
+
+#resources .link {
+    justify-self: right;
+}
+
+
+#resources .link a{
+    display: block;
+    text-align: left;
+}
+
+#resources .social a{
+    padding-right: 20px;
+}
+
+#resources .social svg{
+    fill: white;
+}
+
+#resources .social svg:hover {
+    fill: hsl(180, 66%, 49%);
+}
+
+
